@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,6 +25,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const [value, setValue] = useState("");
 
   return (
     <>
@@ -44,6 +47,14 @@ export default function AuthLayout({
           })}
         </ul>
       </nav>
+      <hr />
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
       <hr />
       {children}
     </>
