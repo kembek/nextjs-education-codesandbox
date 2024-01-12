@@ -18,3 +18,9 @@ Both `layout.tsx` and `page.tsx` files can export metadata. If defined in a layo
 Metadata is read in order, from the root level down to the final page level.
 
 When there's metadata in multiple places for the same route, they get combined, but page metadata will replace layout metadata if they have the same properties.
+
+## title Metadata
+
+The title field's primary purpose is to define the document title.
+
+It can be either a string or an object.
